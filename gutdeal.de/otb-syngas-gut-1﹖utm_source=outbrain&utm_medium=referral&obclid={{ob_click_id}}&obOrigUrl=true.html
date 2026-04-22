@@ -1,0 +1,1222 @@
+
+<!Doctype html>
+  <html lang="de">
+  <head>
+    <link rel="stylesheet" href="css/landerlab-styles.css"><link rel="stylesheet" href="css/landerlab-quiz-style.css"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content=""><meta name="keywords" content=""><title>Gutdeal.de</title>
+<link rel="stylesheet" href="css/fonts.css">
+
+<style>:root {
+        --ink: #1a1208;
+        --ink-light: #3d2f1a;
+        --ink-muted: #6b5c45;
+        --paper: #faf7f2;
+        --paper-warm: #f5f0e8;
+        --paper-dark: #ede7d9;
+        --accent: #c0392b;
+        --accent-dark: #962d22;
+        --accent-warm: #e8703a;
+        --gold: #b8891a;
+        --border: #d4c4a8;
+        --border-light: #e8dfc9;
+        --green: #2d6a4f;
+        --green-light: #e8f5ee;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--paper);
+        color: var(--ink);
+        font-family: 'Source Serif 4', Georgia, serif;
+        font-size: 18px;
+        line-height: 1.75;
+        -webkit-font-smoothing: antialiased;
+      }
+      .crisis-banner {
+        background: #7b1a14;
+        color: #fff;
+        text-align: center;
+        padding: 9px 20px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        font-family: 'Source Serif 4', serif;
+        border-bottom: 2px solid #c0392b;
+      }
+
+      .crisis-banner strong {
+        color: #ffd6d0;
+      }
+      .masthead {
+        background: var(--ink);
+        color: var(--paper);
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        font-family: 'Source Serif 4', serif;
+        font-weight: 300;
+      }
+
+      a.hero-cta {
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        outline: none;
+      }
+      a.hero-cta .hero-image {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      a.hero-cta:hover {
+        filter: brightness(1.02);
+      }
+      a.hero-cta:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      .site-header {
+        background: var(--paper);
+        border-bottom: 3px double var(--ink);
+        padding: 18px 20px 14px;
+        text-align: center;
+      }
+
+      .site-name {
+        font-family: 'Playfair Display', serif;
+        font-size: 13px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin-bottom: 4px;
+      }
+
+      .site-tagline {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        font-weight: 300;
+      }
+      .offer-bar {
+        background: var(--accent);
+        color: white;
+        text-align: center;
+        padding: 12px 20px;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .offer-bar a {
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        padding: 5px 16px;
+        text-decoration: none;
+        font-size: 13px;
+        letter-spacing: 0.06em;
+        transition: background 0.2s;
+        white-space: nowrap;
+      }
+
+      .offer-bar a:hover {
+        background: rgba(255, 255, 255, 0.35);
+      }
+
+      .offer-bar .trust-items {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 300;
+        opacity: 0.9;
+      }
+      .article-container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .article-label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 24px 0 16px;
+        border-bottom: 1px solid var(--border-light);
+        margin-bottom: 28px;
+      }
+
+      .tag-advertorial {
+        background: var(--ink);
+        color: var(--paper);
+        font-size: 9px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        font-weight: 600;
+      }
+
+      .article-date {
+        font-size: 12px;
+        color: var(--ink-muted);
+        letter-spacing: 0.06em;
+        font-style: italic;
+      }
+
+      .article-section {
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        border-left: 2px solid var(--accent);
+        padding-left: 10px;
+      }
+      .headline {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(28px, 5vw, 44px);
+        line-height: 1.18;
+        color: var(--ink);
+        margin-bottom: 18px;
+        font-weight: 700;
+        letter-spacing: -0.01em;
+      }
+
+      .subheadline {
+        font-size: 19px;
+        line-height: 1.55;
+        color: var(--ink-light);
+        font-style: italic;
+        font-weight: 300;
+        margin-bottom: 24px;
+        border-left: 3px solid var(--accent-warm);
+        padding-left: 16px;
+      }
+      .byline {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 16px 0;
+        border-top: 1px solid var(--border-light);
+        border-bottom: 1px solid var(--border-light);
+        margin-bottom: 32px;
+      }
+
+      .byline-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: var(--paper-dark);
+        border: 2px solid var(--border);
+        overflow: hidden;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Playfair Display', serif;
+        font-size: 20px;
+        color: var(--ink-muted);
+      }
+
+      .byline-info {
+        flex: 1;
+      }
+
+      .byline-name {
+        font-weight: 600;
+        font-size: 15px;
+        color: var(--ink);
+        display: block;
+      }
+
+      .byline-role {
+        font-size: 12px;
+        color: var(--ink-muted);
+        font-style: italic;
+      }
+
+      .update-badge {
+        font-size: 11px;
+        color: var(--accent);
+        background: #fdf2f0;
+        border: 1px solid #f5c6c0;
+        padding: 3px 10px;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+      }
+      .crisis-box {
+        background: #fff8f7;
+        border: 1px solid #f5c6c0;
+        border-left: 4px solid var(--accent);
+        padding: 18px 20px;
+        margin-bottom: 28px;
+        font-size: 15px;
+        line-height: 1.6;
+        color: var(--ink-light);
+      }
+
+      .crisis-box-title {
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--accent);
+        font-weight: 700;
+        margin-bottom: 8px;
+      }
+
+      .crisis-box strong {
+        color: var(--ink);
+      }
+      .hero-image {
+        width: 100%;
+        aspect-ratio: 16/7;
+        background: linear-gradient(135deg, #1a1208 0%, #2d1f0f 50%, #1a1208 100%);
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hero-scene {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        position: relative;
+        z-index: 1;
+        padding: 20px;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .price-comparison {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        flex: 1;
+      }
+
+      .price-row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .price-year {
+        font-size: 11px;
+        color: rgba(250, 247, 242, 0.5);
+        letter-spacing: 0.08em;
+        width: 36px;
+        text-align: right;
+        flex-shrink: 0;
+      }
+
+      .price-bar-wrap {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.07);
+        height: 28px;
+        position: relative;
+        border-radius: 2px;
+        overflow: hidden;
+      }
+
+      .price-bar-fill {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        font-family: 'Courier New', monospace;
+        font-size: 13px;
+        font-weight: bold;
+        color: white;
+        transition: width 1s ease;
+      }
+
+      .price-bar-fill.y2022 {
+        background: rgba(192, 57, 43, 0.7);
+        width: 82%;
+      }
+
+      .price-bar-fill.y2024 {
+        background: rgba(192, 57, 43, 0.5);
+        width: 72%;
+      }
+
+      .price-bar-fill.y2026 {
+        background: rgba(192, 57, 43, 1);
+        width: 95%;
+      }
+
+      .price-bar-fill.y2026::after {
+        content: '← Rekord';
+        font-family: 'Source Serif 4', serif;
+        font-size: 10px;
+        font-weight: 300;
+        opacity: 0.8;
+        margin-left: 6px;
+        letter-spacing: 0.04em;
+      }
+
+      .hero-right {
+        text-align: center;
+        flex-shrink: 0;
+      }
+
+      .current-price-badge {
+        background: rgba(192, 57, 43, 0.15);
+        border: 1px solid rgba(192, 57, 43, 0.4);
+        padding: 14px 20px;
+        text-align: center;
+        border-radius: 2px;
+      }
+
+      .current-price-number {
+        font-family: 'Courier New', monospace;
+        font-size: clamp(28px, 5vw, 42px);
+        font-weight: bold;
+        color: #ff6b35;
+        text-shadow: 0 0 20px rgba(255, 107, 53, 0.6);
+        display: block;
+        line-height: 1;
+        animation: pricePulse 2.5s ease-in-out infinite;
+      }
+
+      .current-price-label {
+        font-size: 10px;
+        color: rgba(250, 247, 242, 0.55);
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-top: 5px;
+        display: block;
+      }
+
+      .hero-chart-title {
+        font-size: 10px;
+        color: rgba(250, 247, 242, 0.4);
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .hero-caption {
+        font-size: 12px;
+        color: var(--ink-muted);
+        font-style: italic;
+        margin-bottom: 32px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid var(--border-light);
+        text-align: center;
+      }
+      p {
+        margin-bottom: 22px;
+        color: var(--ink-light);
+      }
+
+      p strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
+      .pull-quote {
+        border-top: 3px solid var(--ink);
+        border-bottom: 1px solid var(--border);
+        margin: 36px 0;
+        padding: 24px 0 20px;
+        position: relative;
+      }
+
+      .pull-quote::before {
+        content: '\201C';
+        font-family: 'Playfair Display', serif;
+        font-size: 80px;
+        line-height: 1;
+        color: var(--accent);
+        position: absolute;
+        top: -10px;
+        left: 0;
+        opacity: 0.4;
+      }
+
+      .pull-quote p {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(18px, 3vw, 24px);
+        line-height: 1.45;
+        font-style: italic;
+        color: var(--ink);
+        padding-left: 28px;
+        margin-bottom: 10px;
+      }
+
+      .pull-quote cite {
+        font-size: 12px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        padding-left: 28px;
+        display: block;
+      }
+      h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(20px, 3.5vw, 28px);
+        color: var(--ink);
+        margin: 40px 0 18px;
+        font-weight: 700;
+        line-height: 1.3;
+        border-top: 1px solid var(--border-light);
+        padding-top: 36px;
+      }
+
+      h2:first-of-type {
+        border-top: none;
+        padding-top: 0;
+      }
+      .stats-box {
+        background: var(--paper-warm);
+        border: 1px solid var(--border);
+        border-top: 3px solid var(--ink);
+        margin: 32px 0;
+        padding: 24px;
+      }
+
+      .stats-box-title {
+        font-size: 11px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .stat-item {
+        text-align: center;
+        padding: 16px 8px;
+        background: white;
+        border: 1px solid var(--border-light);
+      }
+
+      .stat-value {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(26px, 4vw, 36px);
+        font-weight: 700;
+        color: var(--ink);
+        display: block;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      .stat-value.green {
+        color: var(--green);
+      }
+
+      .stat-value.red {
+        color: var(--accent);
+      }
+
+      .stat-label {
+        font-size: 11px;
+        color: var(--ink-muted);
+        line-height: 1.3;
+        letter-spacing: 0.04em;
+      }
+
+      .stats-note {
+        font-size: 12px;
+        color: var(--ink-muted);
+        font-style: italic;
+        margin-top: 14px;
+        padding-top: 12px;
+        border-top: 1px solid var(--border-light);
+      }
+      .math-box {
+        background: var(--green-light);
+        border: 1px solid #b7deca;
+        border-top: 3px solid var(--green);
+        margin: 28px 0;
+        padding: 20px 24px;
+        font-size: 15px;
+      }
+
+      .math-box-title {
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--green);
+        font-weight: 700;
+        margin-bottom: 14px;
+      }
+
+      .math-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 5px 0;
+        border-bottom: 1px dashed #b7deca;
+        color: var(--ink-light);
+        gap: 12px;
+      }
+
+      .math-line:last-of-type {
+        border-bottom: none;
+      }
+
+      .math-line .label {
+        flex: 1;
+      }
+
+      .math-line .value {
+        font-weight: 600;
+        color: var(--ink);
+        white-space: nowrap;
+      }
+
+      .math-line.total {
+        border-top: 2px solid var(--green);
+        border-bottom: none;
+        margin-top: 8px;
+        padding-top: 12px;
+        font-size: 17px;
+      }
+
+      .math-line.total .value {
+        color: var(--green);
+        font-size: 20px;
+      }
+      .cta-box {
+        background: var(--paper-warm);
+        border: 1px solid var(--border);
+        margin: 36px 0;
+        padding: 28px 28px 24px;
+        text-align: center;
+        position: relative;
+      }
+
+      .cta-box::before {
+        content: 'Aktuelles Angebot';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--accent);
+        color: white;
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        padding: 2px 14px;
+        white-space: nowrap;
+      }
+
+      .cta-discount {
+        font-family: 'Playfair Display', serif;
+        font-size: 42px;
+        font-weight: 700;
+        color: var(--accent);
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .cta-subtitle {
+        font-size: 13px;
+        color: var(--ink-muted);
+        margin-bottom: 20px;
+        letter-spacing: 0.04em;
+      }
+
+      .cta-desc {
+        font-size: 15px;
+        color: var(--ink-light);
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        padding: 14px 36px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        transition: background 0.2s, transform 0.1s;
+        margin-bottom: 14px;
+        animation: btnPulse 2.5s ease-in-out infinite;
+      }
+
+      .cta-button:hover {
+        background: var(--accent-dark);
+        transform: translateY(-1px);
+      }
+
+      .cta-trust {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 4px;
+      }
+
+      .cta-trust span {
+        font-size: 12px;
+        color: var(--ink-muted);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .cta-trust span::before {
+        content: '✓';
+        color: var(--green);
+        font-weight: bold;
+      }
+      .testimonials-header {
+        font-size: 11px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink-muted);
+        text-align: center;
+        margin-bottom: 16px;
+      }
+
+      .testimonial {
+        background: white;
+        border: 1px solid var(--border-light);
+        border-left: 4px solid var(--accent);
+        padding: 20px 22px;
+        margin-bottom: 16px;
+        position: relative;
+      }
+
+      .testimonial-stars {
+        color: var(--gold);
+        font-size: 14px;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        font-size: 16px;
+        line-height: 1.65;
+        color: var(--ink-light);
+        margin-bottom: 12px;
+      }
+
+      .testimonial-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .testimonial-author {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .testimonial-saving {
+        font-size: 13px;
+        color: var(--green);
+        font-weight: 700;
+        background: var(--green-light);
+        padding: 2px 10px;
+        letter-spacing: 0.04em;
+      }
+      .verdict-box {
+        background: var(--ink);
+        color: var(--paper);
+        padding: 28px 30px;
+        margin: 36px 0;
+        position: relative;
+      }
+
+      .verdict-label {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(250, 247, 242, 0.45);
+        margin-bottom: 16px;
+      }
+
+      .verdict-text {
+        font-size: 17px;
+        line-height: 1.6;
+        color: rgba(250, 247, 242, 0.9);
+        margin-bottom: 18px;
+        font-style: italic;
+      }
+
+      .verdict-rating {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-top: 1px solid rgba(250, 247, 242, 0.15);
+        padding-top: 14px;
+      }
+
+      .verdict-rating-label {
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: rgba(250, 247, 242, 0.4);
+      }
+
+      .verdict-stars {
+        color: var(--gold);
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+      .final-cta {
+        background: var(--accent);
+        color: white;
+        padding: 36px 32px;
+        text-align: center;
+        margin: 36px 0 48px;
+      }
+
+      .final-cta-label {
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.65);
+        margin-bottom: 10px;
+      }
+
+      .final-cta-headline {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(22px, 4vw, 32px);
+        font-weight: 700;
+        color: white;
+        margin-bottom: 8px;
+        line-height: 1.2;
+      }
+
+      .final-cta-sub {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.75);
+        margin-bottom: 24px;
+      }
+      footer#footer.py-45px {
+        background: var(--paper-dark);
+        border-top: 1px solid var(--border);
+        margin-top: 24px;
+        padding: 28px 24px 24px;
+      }
+
+      footer#footer .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      footer#footer .article-footer-links.footer-links,
+      footer#footer .footer-links.article-footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0 4px;
+        margin: 0 0 8px 0;
+        padding: 0 0 15px 0;
+        border-bottom: 1px solid var(--border-light);
+      }
+
+      @media (min-width: 768px) {
+        footer#footer .md-pb-25px {
+          padding-bottom: 25px;
+        }
+      }
+
+      footer#footer .footer-links a {
+        font-size: 11px;
+        color: var(--ink-muted);
+        text-decoration: none;
+        letter-spacing: 0.08em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      footer#footer .footer-links a:hover {
+        text-decoration: underline;
+        color: var(--ink);
+      }
+
+      footer#footer .footer-links .divider {
+        display: inline-block;
+        width: 1px;
+        height: 12px;
+        background: var(--border);
+        margin: 0 6px;
+        vertical-align: middle;
+        flex-shrink: 0;
+        align-self: center;
+      }
+
+      footer#footer .text-center {
+        text-align: center;
+      }
+
+      footer#footer .pb-15px {
+        padding-bottom: 15px;
+      }
+
+      footer#footer .pb-10px {
+        padding-bottom: 10px;
+      }
+
+      @media (min-width: 768px) {
+        footer#footer .md-pb-15px {
+          padding-bottom: 15px;
+        }
+      }
+
+      footer#footer p.text-center {
+        font-size: 11.5px;
+        color: var(--ink-muted);
+        line-height: 1.6;
+        margin: 0;
+        text-transform: none;
+        letter-spacing: 0.02em;
+        font-weight: 400;
+      }
+
+      footer#footer .mon-img-150-w {
+        display: block;
+        max-width: 130px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      footer#footer .container > a[href^="https://www.dmca.com/"] {
+        display: block;
+        text-align: center;
+        line-height: 0;
+        margin: 10px auto 0;
+        padding-bottom: 4px;
+      }
+      .highlight {
+        background: #fef9e7;
+        border-bottom: 2px solid var(--gold);
+        padding: 0 2px;
+      }
+      .ornament {
+        text-align: center;
+        color: var(--ink-muted);
+        margin: 8px 0 28px;
+        font-size: 16px;
+        letter-spacing: 12px;
+        opacity: 0.4;
+      }
+      @keyframes pricePulse {
+
+        0%,
+        100% {
+          text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+        }
+
+        50% {
+          text-shadow: 0 0 24px rgba(255, 107, 53, 1), 0 0 50px rgba(255, 107, 53, 0.4);
+        }
+      }
+
+      @keyframes btnPulse {
+
+        0%,
+        100% {
+          box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.4);
+        }
+
+        50% {
+          box-shadow: 0 0 0 8px rgba(192, 57, 43, 0);
+        }
+      }
+
+      @keyframes countUp {
+        from {
+          opacity: 0;
+          transform: translateY(6px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .stat-item {
+        animation: countUp 0.5s ease both;
+      }
+
+      .stat-item:nth-child(1) {
+        animation-delay: 0.1s;
+      }
+
+      .stat-item:nth-child(2) {
+        animation-delay: 0.25s;
+      }
+
+      .stat-item:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+      .sticky-cta {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--ink);
+        color: var(--paper);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        padding: 12px 20px;
+        box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.25);
+        flex-wrap: wrap;
+        transform: translateY(100%);
+        transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .sticky-cta.visible {
+        transform: translateY(0);
+      }
+
+      .sticky-cta-text {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.02em;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .sticky-cta-badge {
+        background: var(--accent);
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        padding: 2px 10px;
+        text-transform: uppercase;
+      }
+
+      .sticky-cta-trust {
+        font-size: 12px;
+        color: rgba(250, 247, 242, 0.55);
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .sticky-cta-trust span::before {
+        content: '✓ ';
+        color: #6fcf97;
+      }
+
+      .sticky-cta-btn {
+        background: var(--accent);
+        color: white;
+        text-decoration: none;
+        padding: 10px 26px;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        white-space: nowrap;
+        transition: background 0.2s;
+        flex-shrink: 0;
+        animation: btnPulse 2.5s ease-in-out infinite;
+      }
+
+      .sticky-cta-btn:hover {
+        background: var(--accent-dark);
+      }
+
+      .sticky-cta-close {
+        position: absolute;
+        right: 14px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: rgba(250, 247, 242, 0.4);
+        font-size: 20px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 4px 6px;
+        transition: color 0.2s;
+      }
+
+      .sticky-cta-close:hover {
+        color: var(--paper);
+      }
+
+      @media (max-width: 600px) {
+        .sticky-cta {
+          padding: 10px 14px 10px 14px;
+          gap: 10px;
+        }
+
+        .sticky-cta-trust {
+          display: none;
+        }
+
+        .sticky-cta-text {
+          font-size: 13px;
+        }
+
+        .sticky-cta-close {
+          right: 6px;
+        }
+
+        body {
+          font-size: 17px;
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 8px;
+        }
+
+        .hero-scene {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .article-label {
+          flex-wrap: wrap;
+        }
+
+        .byline {
+          flex-wrap: wrap;
+        }
+
+        .update-badge {
+          width: 100%;
+          text-align: center;
+        }
+
+        .price-comparison {
+          width: 100%;
+        }
+
+        .hero-right {
+          display: none;
+        }
+
+        .math-line {
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        .math-line .value {
+          font-size: 15px;
+        }
+      }</style><link rel="icon" href="" type="image/x-icon">
+</head>
+  <body class="">
+    <style>:root{--ll-color-primary:#2659dc;--ll-color-secondary:#00AC81;--ll-color-background:#ffffff;--ll-color-text-primary:#181822;--ll-color-text-secondary:#8b8b9e;--ll-font-heading:Arial;--ll-font-body:Arial;}#byline-photo{width:100%;height:100%;object-fit:cover;border-radius:50%;display:none;}#io9no6{font-size:17px;}#isnyag{border-top:none;padding-top:4px;margin-top:0;font-size:15px;}#iswc4j{margin-top:16px;}#id1xg{background:url(otb-syngas-gut-1/60730775-59d9-4a21-8d2b-6dec284bc200.jpg);background-position:0% 0%;background-size:cover;background-repeat:repeat;}#icxeuc{color:#FFFFFFFF;}#ibbsea{color:#FFFFFFFF;}#ilb739{color:#FFFFFFFF;}
+      </style>
+      <div id="ior2i" class="masthead"><span id="ik2d5" data-gjs-type="text">Unabhängiger Verbraucher-Journalismus</span></div><div id="icgrs" class="offer-bar"><span id="iqlou" data-gjs-type="text">SynGas — Aktuell <strong id="if5sf" data-gjs-type="text">75% Rabatt</strong></span><div id="ifqg3" class="trust-items"><span id="iio86" data-gjs-type="text">30-Tage Geld-zurück-Garantie</span><span id="iold8" data-gjs-type="text">Sofortversand</span><span id="i2b8j" data-gjs-type="text">Kein Abo</span></div><a id="iy4al" href="https://get-syngas.com/checkout/de-aff/?uid=464&oid=19&affid2=499&sub1={{ob_click_id}}" target="_blank" rel="noopener noreferrer">Jetzt 75% sparen →</a></div><main id="i2r6k" class="article-container"><div id="ik88o" class="article-label"><span id="ixq4l" data-gjs-type="text" class="tag-advertorial">Advertorial</span><span id="i12fu" data-gjs-type="text" class="article-section">Haushalt &amp; Finanzen</span></div><h1 id="i6z7g" data-gjs-type="heading" class="headline">Mein Mann sagte, ich soll einfach weniger fahren. Ich habe stattdessen das hier gefunden.</h1><div id="itg0g" class="subheadline"><span id="idhpr" data-gjs-type="text">Über 200 Euro im Monat nur für Benzin - und das neue Tankpreisgesetz macht es noch schlimmer. Ich habe aufgehört, es hinzunehmen.</span></div><div id="inrx4" class="byline"><div id="id1xg" class="byline-avatar"><img id="byline-photo" src="img/author.jpg" alt="Sarah Brenner"><span id="byline-initial" data-gjs-type="text">S</span></div><div id="ijynb" class="byline-info"><span id="iswb1" data-gjs-type="text" class="byline-name">Sarah Brenner</span><span id="ixkvh" data-gjs-type="text" class="byline-role">Freie Autorin · Alltag, Haushalt &amp; Verbraucherrecht · Mutter von zwei Kindern</span></div><span id="update-badge" data-gjs-type="text" class="update-badge">Stand: ...</span></div><a class="hero-cta" href="https://get-syngas.com/checkout/de-aff/?uid=464&oid=19&affid2=499&sub1={{ob_click_id}}" target="_blank" rel="noopener noreferrer"><div id="ief9v" class="hero-image"><div id="ifhc1" class="hero-scene"><div id="ivgsi" class="price-comparison"><div id="i6nj6" class="hero-chart-title"><span id="ik8yk" data-gjs-type="text">Super E10 — Preisentwicklung Deutschland</span></div><div id="iu6e2" class="price-row"><span id="i49my" data-gjs-type="text" class="price-year">2022</span><div id="ibozk" class="price-bar-wrap"><div id="it9k9" class="price-bar-fill y2022"><span id="iidwp" data-gjs-type="text">1,86 €</span></div></div></div><div id="ixdvt" class="price-row"><span id="i6c95" data-gjs-type="text" class="price-year">2024</span><div id="ik96w" class="price-bar-wrap"><div id="ijn0u" class="price-bar-fill y2024"><span id="i6wbh" data-gjs-type="text">1,71 €</span></div></div></div><div id="i4u6t" class="price-row"><span id="ijjzp" data-gjs-type="text" class="price-year">2026</span><div id="ialxp" class="price-bar-wrap"><div id="ifttk" class="price-bar-fill y2026"><span id="iwmnms" data-gjs-type="text">2,19 €</span></div></div></div></div><div id="isqqg" class="hero-right"><div id="impom" class="current-price-badge"><span id="i6pye" data-gjs-type="text" class="current-price-number">2,19 €</span><span id="i0tzb" data-gjs-type="text" class="current-price-label">Ostermontag-Rekord · April '26</span></div></div></div></div></a><div id="i9fash" class="hero-caption"><span id="irt0ci" data-gjs-type="text">Jahresdurchschnitt Super E10 laut ADAC. Der Spitzenwert vom 6. April 2026 (Ostermontag) übertraf sogar das Rekordjahr 2022.</span></div><p id="icnigh" data-gjs-type="text">Ich fahre nicht viel. Das sage ich nicht zur Beruhigung - das ist schlicht die Wahrheit. Die Kinder müssen täglich zur Grundschule, dreimal die Woche fahre ich selbst zur Arbeit - je etwa 30 Kilometer einfache Strecke - und dazwischen der übliche Einkauf. Kein Außendienst, kein Dienstwagen, keine Langstrecke. Und dennoch lag meine monatliche Tankrechnung im März über der Stromrechnung für unsere gesamte Wohnung.</p><p id="i3b746" data-gjs-type="text">Im März zahlte ich 197 Euro an der Zapfsäule. Ich fahre rund 1.100 Kilometer pro Monat mit meinem Ford Focus 1.5 EcoBoost - Verbrauch laut Bordcomputer: 7,1 Liter auf 100 Kilometer. Das sind knapp 78 Liter im Monat. Bei 2,02 Euro je Liter - dem Märzdurchschnitt laut ADAC - ergibt das exakt diese Zahl. Und seit dem 1. April ist es noch teurer geworden.</p><p id="ixdwxf" data-gjs-type="text">Ich fragte meinen Mann, ob ihm dazu etwas einfällt. Seine Antwort kam schnell und ohne lange nachzudenken: <strong id="iizsdi" data-gjs-type="text">„Dann fahr halt seltener."</strong></p><p id="ilpv6t" data-gjs-type="text">Er meinte es nicht abweisend. Ich glaube, er hatte schlicht keine bessere Idee. Aber der Satz hat mich beschäftigt - weil er eben keine Antwort ist. Ich fahre bereits nicht „zu viel". Ich fahre, weil der Alltag das so verlangt. Weil die Kinder nicht selbst zur Schule kommen. Weil der Wochenmarkt nicht vor der Haustür liegt. Weil Teilzeitarbeit noch lange nicht bedeutet, dass man zu Fuß geht.</p><div id="iwlvvt" class="pull-quote"><p id="ixx2h3" data-gjs-type="text">Politiker versprechen seit Monaten Entlastung. Unterdessen kostet ein Liter Benzin mehr als je zuvor.</p><cite id="irga6m" data-gjs-type="text">— Sarah Brenner, Autorin</cite></div><h2 id="ikml5r" data-gjs-type="heading">Wie ich auf diesen Stecker gestoßen bin</h2><p id="iee9sw" data-gjs-type="text">In der Elternpflegschaft unserer Grundschule gibt es eine Mutter - Andrea, drei Kinder, fährt einen älteren Opel Zafira -, die irgendwann aufgehört hatte, sich über Benzinpreise zu beklagen. Das fiel mir auf, weil das Thema bei unseren Treffen nach der Schulpflegschaft eigentlich nie fehlte. Beim nächsten Elterncafé fragte ich sie direkt, was sich geändert hatte.</p><p id="ixq0jj" data-gjs-type="text">„Ich habe etwas ausprobiert", sagte sie. „Ich war selbst skeptisch, ehrlich gesagt." Sie holte ihr Handy heraus und zeigte mir ein kleines Gerät - etwa so groß wie ein länglicher USB-Stick - das sie unter dem Lenkrad ihres Autos in eine Buchse gesteckt hatte.</p><p id="i2u3pz" data-gjs-type="text">Das Gerät heißt <strong id="ibc2sf" data-gjs-type="text">SynGas</strong>. Es wird in die sogenannte OBD2-Schnittstelle gesteckt - dieselbe Buchse, an die Werkstattmitarbeiter und TÜV-Prüfer ihr Diagnosegerät anschließen, die seit 1996 in jedem in Österreich zugelassenen Fahrzeug gesetzlich vorgeschrieben ist. Laut Hersteller liest der Chip in Echtzeit die Motordaten aus und optimiert die Kraftstoffeinspritzung angepasst an die tatsächliche Fahrweise - anstatt dauerhaft mit den konservativen Werkseinstellungen zu arbeiten, die für den internationalen Einsatz ausgelegt sind.</p><p id="ioxbe1" data-gjs-type="text">Die technische Erklärung habe ich zur Hälfte verstanden. Aber Andrea sagte nur: „Ich halte mir einfach die Tankquittungen vor und nach nebeneinander. Der Rest interessiert mich nicht wirklich."</p><h2 id="i6ebj5" data-gjs-type="heading">Mein Selbstversuch: Acht Wochen, zwei Phasen, ein Haushaltsbuch</h2><p id="i8tqfq" data-gjs-type="text">Ich bin weder Journalistin noch Ingenieurin. Aber ich führe seit gut vier Jahren ein Haushaltsbuch - jede Ausgabe, jede Tankfüllung, Datum und Literpreis. Das ist eine Angewohnheit aus der Zeit, als das Geld wirklich knapp war, und ich habe sie nie abgelegt. Ich hatte also die Grundlage, um das selbst nachzuprüfen.</p><p id="imw6i4" data-gjs-type="text">Vier Wochen lang fuhr ich ohne SynGas und notierte alles wie gewohnt. Danach vier Wochen mit SynGas - möglichst gleiche Strecken, gleiche Fahrweise, so weit das mit zwei Kindern und dem normalen Alltagschaos realistisch möglich ist. Mein Fahrzeug: Ford Focus 1.5 EcoBoost, Baujahr 2018. Hauptsächlich Stadtverkehr in und um Karlsruhe, gelegentlich Überlandfahrten.</p><div id="io49c3" class="stats-box"><div id="ils8mw" class="stats-box-title"><span id="ive2q4" data-gjs-type="text">Messergebnisse — Ford Focus 1.5 EcoBoost · Haushaltsbuch Sarah Brenner</span></div><div id="ivn34s" class="stats-grid"><div id="ilxu3n" class="stat-item"><span id="iva10j" data-gjs-type="text" class="stat-value red">7,1 L</span><span id="iw94r8" data-gjs-type="text" class="stat-label">Ø Verbrauch
+              <br id="iw4dlo"><em id="iwhukm" data-gjs-type="text">ohne SynGas</em></span></div><div id="i5e0fp" class="stat-item"><span id="if37fg" data-gjs-type="text" class="stat-value green">5,6 L</span><span id="ipacqh" data-gjs-type="text" class="stat-label">Ø Verbrauch
+              <br id="i7z7le"><em id="iuje2o" data-gjs-type="text">mit SynGas</em></span></div><div id="i3s3mt" class="stat-item"><span id="igwtlh" data-gjs-type="text" class="stat-value green">−21%</span><span id="in7g5p" data-gjs-type="text" class="stat-label">Bestätigte
+              <br id="iy10ri">Ersparnis
+            </span></div></div><div id="i2zh0z" class="stats-note"><span id="ifuw3d" data-gjs-type="text">Beide Testphasen über je vier Wochen. Überwiegend Stadtverkehr in und um Graz. Tankquittungen und Haushaltsbuch liegen vor.</span></div></div><p id="iyh2kb" data-gjs-type="text">21 Prozent weniger Verbrauch - das liest sich wie ein Werbeprospekt. Das weiß ich. Ich hätte es selbst nicht geglaubt, wenn ich es nicht im Haushaltsbuch stehen hätte. Ich habe die Rechnung dreimal nachgeprüft:</p><div id="ivttrf" class="math-box"><div id="ipon7h" class="math-box-title"><span id="in59cg" data-gjs-type="text">Nachgerechnet — so kommt die Ersparnis zustande</span></div><div id="ilsoek" class="math-line"><span id="izczxc" data-gjs-type="text" class="label">Monatliche Fahrleistung</span><span id="irx77h" data-gjs-type="text" class="value">1.100 km</span></div><div id="inhxv8" class="math-line"><span id="i8k21z" data-gjs-type="text" class="label">Verbrauch ohne SynGas (7,1 L/100 km)</span><span id="ior3bi" data-gjs-type="text" class="value">78,1 L / Monat</span></div><div id="isd2zb" class="math-line"><span id="i9ey2i" data-gjs-type="text" class="label">Verbrauch mit SynGas (5,6 L/100 km)</span><span id="i8zh2h" data-gjs-type="text" class="value">61,6 L / Monat</span></div><div id="ildr41" class="math-line"><span id="i1ybt5" data-gjs-type="text" class="label">Eingesparte Liter</span><span id="ik8lmn" data-gjs-type="text" class="value">16,5 L / Monat</span></div><div id="idyqov" class="math-line"><span id="ivkb43" data-gjs-type="text" class="label">Aktueller E10-Preis (ADAC, April 2026)</span><span id="iq1d27" data-gjs-type="text" class="value">ca. 2,10 €/L</span></div><div id="iezryi" class="math-line total"><span id="ill92w" data-gjs-type="text" class="label"><strong id="ip46mj" data-gjs-type="text">Ersparnis pro Monat</strong></span><span id="inyexp" data-gjs-type="text" class="value"><strong id="il285k" data-gjs-type="text">≈ 35 € / Monat</strong></span></div><div id="isnyag" class="math-line total"><span id="icteol" data-gjs-type="text" class="label"><strong id="ixl1un" data-gjs-type="text">Hochgerechnet aufs Jahr</strong></span><span id="io9no6" data-gjs-type="text" class="value"><strong id="iz7p4f" data-gjs-type="text">≈ 420 € / Jahr</strong></span></div></div><p id="i8j2j5" data-gjs-type="text">Ich habe meinem Mann die Quittungen nebeneinandergelegt und die Zahlen erklärt. Er hat eine Weile geschwiegen. Dann fragte er, ob man das Gerät auch für seinen Kombi bekommt.</p><div id="igw7pl" class="cta-box"><div id="ize19m" class="cta-discount"><span id="iet1f9" data-gjs-type="text">75% Rabatt</span></div><div id="if2huw" class="cta-subtitle"><span id="io3yf1" data-gjs-type="text">SynGas heute testen</span></div><div id="iixj8c" class="cta-desc"><span id="ilvtbs" data-gjs-type="text">Das Gerät, das ich aus einer Mischung aus Neugier und Frust bestellt habe — und das seither dauerhaft in meinem Auto steckt. Besonders jetzt, mit Benzinpreisen auf Rekordhoch, rechnet es sich schneller als je zuvor.</span></div><a id="iexl23" href="https://get-syngas.com/checkout/de-aff/?uid=464&oid=19&affid2=499&sub1={{ob_click_id}}" target="_blank" rel="noopener noreferrer" class="cta-button">Verfügbarkeit prüfen →</a><div id="ixhc4o" class="cta-trust"><span id="i6b60c" data-gjs-type="text">30 Tage Geld-zurück</span><span id="iqotee" data-gjs-type="text">Sofortversand</span><span id="i5zwsp" data-gjs-type="text">Kein Abo</span></div></div><h2 id="ieocxi" data-gjs-type="heading">Was mich am meisten überrascht hat: die Einrichtung</h2><p id="ie5tuy" data-gjs-type="text">Ich bin kein technischer Mensch. Ich bringe das Auto zur Inspektion, nicke beim Gespräch mit dem Werkstattmeister und unterschreibe den Kostenvoranschlag. Das war mir also wichtig: Ist das etwas, das ich selbst anschließen kann, ohne etwas zu beschädigen?</p><p id="i9wozi" data-gjs-type="text">Die Einrichtung dauerte - wenn man dieses Wort hier überhaupt verwenden darf - keine 30 Sekunden. Die OBD2-Buchse befindet sich bei meinem Focus links unterhalb des Lenkrads, gut erreichbar ohne Werkzeug. Stecker einstecken, Zündung für etwa 30 Sekunden einschalten, Motor anlassen, losfahren. Das war alles.</p><p id="isieij" data-gjs-type="text">Die OBD2-Schnittstelle ist seit 1996 in Österreich für alle Fahrzeuge Pflicht und wird bei der Hauptuntersuchung zur Fehlerauslesung genutzt. SynGas kommuniziert über genau diese Schnittstelle mit der Motorsteuerung, nimmt aber laut Hersteller keine dauerhaften Veränderungen vor. Zieht man den Stecker heraus, ist das Fahrzeug sofort wieder in seinem ursprünglichen Zustand - ohne Rückstände im System.</p><h2 id="i1qoel" data-gjs-type="heading">Ist das legal - und was sagt die Werkstatt dazu?</h2><p id="i0o0ql" data-gjs-type="text">Das war meine erste Frage, noch bevor ich bestellt hatte. Beim nächsten Ölwechsel habe ich unseren Kfz-Meister Herrn Schäfer direkt gefragt - er betreut beide Autos bei uns seit Jahren, kennt unsere Fahrprofile und redet Klartext, wenn ihm etwas nicht passt. Ich zeigte ihm das Gerät und fragte ihn offen.</p><p id="ivbhf9" data-gjs-type="text">Seine Einschätzung war nüchtern und eindeutig: Solange der Stecker keine dauerhaften Änderungen an der Motorsteuerung vornimmt - und das ist bei SynGas laut Hersteller nicht der Fall - gibt es aus seiner Sicht keinen Grund zur Beanstandung. „Das Steuergerät Ihres Autos hat ohnehin Toleranzbereiche, die im Werksbetrieb nicht ausgeschöpft werden. Was dieses Gerät macht, bewegt sich nach allem, was ich sehen kann, innerhalb dieser Grenzen", sagte er. Auf Garantie und Hauptuntersuchung habe es keinen Einfluss, da keine irreversiblen Eingriffe stattfinden.</p><p id="iycewq" data-gjs-type="text">Ich bin keine Anwältin und gebe hier keine Rechtsauskunft - das sei ausdrücklich gesagt. Aber ich habe nachgefragt, bevor ich etwas ausprobiert habe. Und der Stecker steckt seither ohne Bedenken in meinem Auto.</p><div id="i37un4" class="ornament"></div><h2 id="is11ql" data-gjs-type="heading">Was drei Bekannte nach dem Test berichten</h2><p id="igs5el" data-gjs-type="text">Nachdem ich in unserer Pflegschaftsgruppe kurz erzählt hatte, was ich getestet hatte, haben sich binnen einer Woche drei weitere Frauen gemeldet, die es ebenfalls ausprobiert haben. Ich gebe ihre Rückmeldungen ungekürzt wieder:</p><div id="irzty4" class="testimonials-header"><span id="imic55" data-gjs-type="text">Leser-Rückmeldungen</span></div><div id="i2bupf" class="testimonial"><div id="ih8xkn" class="testimonial-stars"><span id="i4pu72" data-gjs-type="text">★★★★★</span></div><div id="imwusv" class="testimonial-text"><span id="icmd08" data-gjs-type="text">„Ich bringe morgens die Kinder zur Schule, fahre anschließend zur Arbeit und nachmittags wieder zurück - täglich rund 65 Kilometer. Seit ich den Chip verwende, fahre ich spürbar seltener zur Tankstelle. Mein Mann wollte es erst nicht glauben, bis ich ihm die Quittungen der letzten drei Monate hingelegt habe. Inzwischen hat er einen für seinen Kastenwagen bestellt."</span></div><div id="i55rii" class="testimonial-meta"><span id="ijjq3j" data-gjs-type="text" class="testimonial-author">Kerstin D., 39 — Linz, Toyota Corolla</span><span id="i6e419" data-gjs-type="text" class="testimonial-saving">−19%</span></div></div><div id="il5zr5" class="testimonial"><div id="i5s5dm" class="testimonial-stars"><span id="i0405x" data-gjs-type="text">★★★★☆</span></div><div id="idzkf4" class="testimonial-text"><span id="iy75ae" data-gjs-type="text">„Ich war zunächst wirklich skeptisch - solche Geräte klingen nach dem, was mein Mann als „Voodoo-Technik" bezeichnet. Mein Bruder hat mich überredet, es mit der Geld-zurück-Garantie wenigstens zu versuchen. Nach sechs Wochen lag mein Verbrauch von 8,8 auf 7,0 Liter - das sind bei den aktuellen Preisen über 45 Euro im Monat. Mein älterer Diesel läuft außerdem ruhiger als vorher, was ich so nicht erwartet hätte."</span></div><div id="ivqznx" class="testimonial-meta"><span id="i90taj" data-gjs-type="text" class="testimonial-author">Monika S., 52 — Salzburg, Ford Focus TDCi</span><span id="iz3szk" data-gjs-type="text" class="testimonial-saving">−20%</span></div></div><div id="ijdtns" class="testimonial"><div id="iycwc9" class="testimonial-stars"><span id="i4nh71" data-gjs-type="text">★★★★★</span></div><div id="ii7bd5" class="testimonial-text"><span id="ismlvg" data-gjs-type="text">„Ich bewerte Produkte eigentlich so gut wie nie. Aber hier tue ich es, weil ich die Zahlen selbst nachgerechnet habe: Im Haushaltsbuch fehlen pro Quartal rund 155 Euro an Spritkosten. Hochgerechnet auf das Jahr sind das über 620 Euro - eine Summe, die ich früher einfach still an der Tankstelle gelassen habe, ohne darüber nachzudenken. Gerade jetzt, wo die Preise wieder explodieren, macht das einen echten Unterschied."</span></div><div id="iaaq7j" class="testimonial-meta"><span id="iabuay" data-gjs-type="text" class="testimonial-author">Julia W., 44 — Wien, Renault Mégane</span><span id="iyv80i" data-gjs-type="text" class="testimonial-saving">−22%</span></div></div><h2 id="i5mz6j" data-gjs-type="heading">Mein Fazit - und warum mich das im Nachhinein ein wenig ärgert</h2><p id="iyi1ps" data-gjs-type="text">Nicht das Gerät ärgert mich. Mich ärgert, dass ich jahrelang einfach mehr bezahlt habe, ohne auch nur einmal nachzufragen, ob es eine Alternative gibt. Benzinpreise steigen - man schluckt es, tankt, fährt weiter. Vielleicht dreht man die Heizung etwas runter oder verzichtet auf das Restaurantessen am Freitag. Aber an der Zapfsäule selbst denkt man nicht über Lösungen nach. Das neue „Österreich-Modell" sollte das ändern - stattdessen kletterten die Preise am ersten April auf Rekordniveaus. Die politische Lösung ist gescheitert. Die eigene Lösung muss man selbst finden.</p><p id="im68ig" data-gjs-type="text">SynGas ist kein Wundermittel. Das möchte ich ausdrücklich sagen. Die beworbenen 55 Prozent Ersparnis halte ich für unrealistisch unter normalen Alltagsbedingungen. Was ich nach acht Wochen Selbstversuch sagen kann: Für Fahrerinnen und Fahrer mit modernen Benzin- oder Dieselmotoren, die überwiegend im Stadt- und Pendelverkehr unterwegs sind, ist ein Effekt von 15 bis 25 Prozent realistisch und nachprüfbar. Bei meinen 1.100 Kilometern im Monat waren das rund 420 Euro im Jahr - nachgezählt, Quittung für Quittung.</p><p id="i8pnxa" data-gjs-type="text">Das Gerät kostet heute, mit dem laufenden Rabatt, weniger als eine einzige Tankfüllung. Und wer nach 30 Tagen keinen Unterschied feststellt, kann es zurückschicken. <strong id="itevlz" data-gjs-type="text">Das Risiko liegt eindeutig nicht bei uns Käufern.</strong></p><div id="ig6j4p" class="verdict-box"><div id="ijdaf1" class="verdict-label"><span id="i5ei3w" data-gjs-type="text">Redaktionelles Urteil ·</span></div><div id="izek16" class="verdict-text"><span id="ifn5v1" data-gjs-type="text">SynGas liefert unter realen Alltagsbedingungen messbare Ergebnisse - auch wenn die beworbenen Maximalwerte von 55 % in der Praxis selten erreicht werden. Für Familien und Pendler mit modernen Benzin- oder Dieselfahrzeugen im Stadt- und Überlandverkehr ist das Preis-Risiko-Verhältnis beim aktuellen Rabatt klar vertretbar. Angesichts der Rekordspritpreise im April 2026 amortisiert sich das Gerät schneller als je zuvor. Empfehlung: selbst testen.</span></div><div id="iff4mo" class="verdict-rating"><span id="i5rog9" data-gjs-type="text" class="verdict-rating-label">Redaktionsbewertung</span><span id="iqncpx" data-gjs-type="text" class="verdict-stars">★★★★☆</span></div></div><div id="ig0xjo" class="final-cta"><div id="i6l7wr" class="final-cta-label"><span id="ipflf7" data-gjs-type="text">Jetzt — solange der Rabatt gilt</span></div><div id="ik3pl6" class="final-cta-headline"><span id="ihfbnx" data-gjs-type="text">75% Rabatt auf SynGas sichern</span></div><div id="ibievx" class="final-cta-sub"><span id="i06gfe" data-gjs-type="text">Direkt beim Hersteller · Sofortversand nach Deutschland, Österreich &amp; Schweiz</span></div><a id="iinm5e" href="https://get-syngas.com/checkout/de-aff/?uid=464&oid=19&affid2=499&sub1={{ob_click_id}}" target="_blank" rel="noopener noreferrer" class="cta-button">Jetzt Verfügbarkeit prüfen →</a><div id="iswc4j" class="cta-trust"><span id="icxeuc" data-gjs-type="text">30 Tage Geld-zurück</span><span id="ibbsea" data-gjs-type="text">Schneller Versand</span><span id="ilb739" data-gjs-type="text">24/7 Support</span></div></div></main><section id="izh8tt" data-gjs-type="section" class="ll-section ll-section__grid"><div id="irgena" data-gjs-type="container" class="ll-container ll-container__grid"><footer id="footer" class="py-45px">
+	<div class="container ">
+		<div class="footer-links article-footer-links pb-15px md-pb-25px">
+			<a href="https://get-syngas.com/legal/contact-us-de/" target="_blank" rel="noopener noreferrer">KONTAKT</a>
+			<span class="divider"></span>
+			<a href="https://get-syngas.com/legal/privacy-policy-de/" target="_blank" rel="noopener noreferrer">DATENSCHUTZPOLITIK</a>
+			<span class="divider"></span>
+			<a href="https://get-syngas.com/legal/terms-conditions-de/" target="_blank" rel="noopener noreferrer">BEDINGUNGEN UND KONDITIONEN</a>
+			<span class="divider"></span>
+			<a href="https://get-syngas.com/legal/impressum-de/" target="_blank" rel="noopener noreferrer">Impressum</a>
+		</div>
+		<p class="text-center pb-15px">DIES IST EINE WERBUNG UND KEIN ECHTER NACHRICHTENARTIKEL, BLOG ODER VERBRAUCHERSCHUTZ-UPDATE</p>
+		<p class="text-center pb-15px">OFFENLEGUNG DER WERBUNG: DIESE WEBSITE UND DIE PRODUKTE UND DIENSTLEISTUNGEN, AUF DIE AUF DER WEBSITE VERWIESEN WIRD, SIND WERBEMARKTPLÄTZE. DIESE WEBSITE IST EINE WERBUNG UND KEINE NACHRICHTENPUBLIKATION. ALLE AUF DIESER WEBSITE VERWENDETEN FOTOS VON PERSONEN SIND MODELLE. DER EIGENTÜMER DIESER WEBSITE UND DER PRODUKTE UND DIENSTLEISTUNGEN, AUF DIE AUF DIESER WEBSITE VERWIESEN WIRD, BIETET LEDIGLICH EINEN SERVICE AN, ÜBER DEN VERBRAUCHER SICH INFORMIEREN UND VERGLEICHEN KÖNNEN.</p>
+		<p class="text-center pb-15px">MARKETING OFFENLEGUNG: DIESE WEBSITE IST EIN MARKTPLATZ. ALS SOLCHER SOLLTEN SIE WISSEN, DASS DER EIGENTÜMER EINE FINANZIELLE VERBINDUNG ZU DEN AUF DER WEBSITE BEWORBENEN PRODUKTEN UND DIENSTLEISTUNGEN HAT. DER EIGENTÜMER ERHÄLT EINE ZAHLUNG, WENN EIN QUALIFIZIERTER LEAD VERMITTELT WIRD, ABER DAS IST AUCH SCHON ALLES.</p>
+		<p class="text-center pb-10px md-pb-15px">© 2026 SynGas | Alle Rechte vorbehalten.</p>
+		<a href="https://www.dmca.com/" target="_blank" rel="noopener noreferrer"><img src="https://get-syngas.com/img/ZG1jYS0zLnBuZy.png" class="mon-img-150-w" alt="Logo in footer" loading="lazy" decoding="async" width="130" height="50"></a>
+	</div>
+</footer></div></section><div id="sticky-cta" class="sticky-cta"><div id="ivebog" class="sticky-cta-text"><span id="isstvl" data-gjs-type="text" class="sticky-cta-badge">75% Rabatt</span><span id="iw670h" data-gjs-type="text">SynGas — Jetzt sichern &amp; bis zu 420 € im Jahr sparen</span></div><div id="i5cur6" class="sticky-cta-trust"><span id="in0a6o" data-gjs-type="text">30 Tage Geld-zurück</span><span id="icx9zh" data-gjs-type="text">Sofortversand</span><span id="il9vbf" data-gjs-type="text">Kein Abo</span></div><a id="iphrzb" href="https://get-syngas.com/checkout/de-aff/?uid=464&oid=19&affid2=499&sub1={{ob_click_id}}" target="_blank" rel="noopener noreferrer" class="sticky-cta-btn">Verfügbarkeit prüfen →</a><button id="sticky-close" data-gjs-type="button" aria-label="Schließen" class="sticky-cta-close">×</button></div><script id="itt4es">
+  (function() {
+    const photo   = document.getElementById('byline-photo');
+    const initial = document.getElementById('byline-initial');
+    if (!photo) return;
+    photo.addEventListener('load', function() {
+      photo.style.display = 'block';
+      if (initial) initial.style.display = 'none';
+    });
+    photo.addEventListener('error', function() {
+      photo.style.display = 'none';
+      if (initial) initial.style.display = '';
+    });
+  })();
+  (function() {
+    const days = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
+    const months = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
+
+    const d = new Date();
+    d.setDate(d.getDate() - 3);
+
+    const dayName  = days[d.getDay()];
+    const day      = d.getDate();
+    const month    = months[d.getMonth()];
+    const year     = d.getFullYear();
+
+    const longDate  = dayName + ', ' + day + '. ' + month + ' ' + year;
+    const shortDate = 'Stand: ' + day + '. ' + month + ' ' + year;
+
+    const articleDate = document.getElementById('article-date');
+    const updateBadge = document.getElementById('update-badge');
+    if (articleDate) articleDate.textContent = longDate;
+    if (updateBadge) updateBadge.textContent = shortDate;
+  })();
+  (function() {
+    const bar   = document.getElementById('sticky-cta');
+    const close = document.getElementById('sticky-close');
+    let dismissed = false;
+
+    function onScroll() {
+      if (dismissed) return;
+      if (window.scrollY > 400) {
+        bar.classList.add('visible');
+      } else {
+        bar.classList.remove('visible');
+      }
+    }
+
+    close.addEventListener('click', function() {
+      dismissed = true;
+      bar.classList.remove('visible');
+    });
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+  })();
+</script>
+    </body>
+</html>
